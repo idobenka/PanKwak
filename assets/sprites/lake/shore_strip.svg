@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="40" viewBox="0 0 96 40">
+  <!-- Shore / grass-bank strip — landscape-bottom blend (CATS-73, parent CATS-58).
+
+       PURPOSE: tile this along the landscape band at the top of the screen (the timer strip) so
+       the band's lower edge blends with the lake shore banks (the vertical green banks at the
+       home/far shores) into one continuous bank surface. This is the asset side of the CATS-74
+       ask, refined in review: "keep it 96×40 — bottom dense with trees growing into transparency.
+       Remove the [opaque] lower half … the silhouette of the trees carries the bottom density
+       and grows up into open sky."
+
+       THE LOAD-BEARING DESIGN: there is NO background rect in this tile — no opaque slab at all.
+       Every pixel of green is a tree-crown lobe. The crowns are packed shoulder-to-shoulder at
+       the BOTTOM edge (y = 40 = the waterline, where the renderer anchors the dense edge and
+       where the strip must blend hardest with the vertical #3a7d4f shores); their wide lower
+       lobes overlap into a near-solid green line along the waterline, then the crowns rise as
+       distinct rounded treetops that thin out and fade into fully transparent open sky toward
+       the top (y = 0). So the bottom reads as a continuous grass bank (dense foliage, blends
+       with the shores) and the top reads as a treeline against the day-cycle sky — "trees
+       growing up to the sky," driven entirely by the silhouette, not by a fill.
+
+       DERIVED FROM shore_grass.svg (CATS-67), NOT a new look: identical palette (#3a7d4f base,
+       #2f6640 single darker tone, #4f9763 foliage accent, #5fa97a sunlit highlight), identical
+       flat-soft-rounded mark language (overlapping rounded lobes, no blades/spikes), so a seam
+       between this strip and the vertical shore banks reads as ONE bank.
+
+       TILE SHAPE: 96×40 — width 96 == shore_grass.svg's horizontal period (strip↔bank seam
+       invisible); height 40 so the renderer's size-agnostic tiling (createPattern 'repeat',
+       dense edge anchored on the waterline) places exactly one tile row with its dense bottom
+       edge ON the waterline. TILEABLE BOTH AXES: crowns are drawn in matched pairs across
+       x = 0 / x = 96 (every edge crown has a copy shifted ±96) so horizontal tiling is seamless
+       at any screen width; vertical tiling is well-formed though not exercised by the single
+       band row.
+
+       CANOPY SILHOUETTE (R8/R9: rounded, never menacing): each crown = a vertical stack of
+       overlapping rounded ellipses (same lobe family as the grass tufts) — a wide #3a7d4f base
+       that meets the waterline, #4f9763 foliage body rising, one #2f6640 underside for the soft
+       darker tone, and a #5fa97a sunlit cap (the warm-light bias, top-left). Crown heights vary
+       (rolling treeline) so the top edge is gently irregular, not a ruler. All marks fully
+       opaque — the fade into the sky comes from the crowns thinning out (sparse + separated near
+       the top, then nothing), not from alpha; keeps the flat-fill vocabulary clean. If QA wants
+       a softer feather at the very top, drop the topmost lobe's opacity to ~0.7 — one-edit tweak.
+
+       FIXED tint (shores are not tinted today — solid #3a7d4f rects). See the README
+       "Landscape-bottom blend" section for tint survival across the day→dusk sky above and the
+       pal.water fill below. -->
+  <defs>
+    <clipPath id="tile"><rect x="0" y="0" width="96" height="40"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#tile)">
+    <!-- BASE lobes (#3a7d4f) — the wide bottoms of every crown, packed at the waterline. These
+         overlap horizontally into a near-solid green line along y ≈ [30,40] so the strip's bottom
+         edge reads as continuous bank and blends with the vertical #3a7d4f shores. Drawn first
+         (lowest z). Crowns at cx ∈ {8,24,40,56,72,88} (16px spacing); edge crowns cx=8 and cx=88
+         get wrap copies at cx=104 and cx=−8 so the treeline is seamless across the x=0/x=96 seam. -->
+    <g fill="#3a7d4f">
+      <ellipse cx="8"   cy="37"   rx="10" ry="6.5"/>
+      <ellipse cx="24"  cy="37.5" rx="10" ry="6"/>
+      <ellipse cx="40"  cy="37"   rx="10" ry="6.5"/>
+      <ellipse cx="56"  cy="37"   rx="10" ry="6.5"/>
+      <ellipse cx="72"  cy="37.5" rx="10" ry="6"/>
+      <ellipse cx="88"  cy="37"   rx="10" ry="6.5"/>
+      <!-- wrap copies of the edge crowns (cx=8 → cx=104, cx=88 → cx=−8) for seamless tiling -->
+      <ellipse cx="104" cy="37"   rx="10" ry="6.5"/>
+      <ellipse cx="-8"  cy="37"   rx="10" ry="6.5"/>
+    </g>
+
+    <!-- UNDERSIDE lobes (#2f6640) — the single allowed slightly-darker tone, set just up-left of
+         each crown's base for a soft shadowed underside (depth, never a hard shadow). -->
+    <g fill="#2f6640">
+      <ellipse cx="6"   cy="33" rx="6.5" ry="4.5"/>
+      <ellipse cx="22"  cy="33.5" rx="6" ry="4"/>
+      <ellipse cx="38"  cy="33" rx="6.5" ry="4.5"/>
+      <ellipse cx="54"  cy="33" rx="6.5" ry="4.5"/>
+      <ellipse cx="70"  cy="33.5" rx="6" ry="4"/>
+      <ellipse cx="86"  cy="33" rx="6.5" ry="4.5"/>
+      <ellipse cx="102" cy="33" rx="6.5" ry="4.5"/>
+      <ellipse cx="-10" cy="33" rx="6.5" ry="4.5"/>
+    </g>
+
+    <!-- FOLIAGE body + tops (#4f9763) — the rising crown mass. Each crown = a lower body lobe
+         (cy ≈ 30) and one or two rising lobes up to the crown's top (varying cy per crown for a
+         rolling treeline). Taller crowns (cx=8,40,56,88) get an extra mid lobe; shorter crowns
+         (cx=24,72) stop lower. This is where the treeline thins: bodies overlap near the bottom
+         and separate toward the top. -->
+    <g fill="#4f9763">
+      <!-- cx=8 (tall, top ≈ 12) -->
+      <ellipse cx="8"  cy="30" rx="9"   ry="7"/>
+      <ellipse cx="9"  cy="21" rx="7.5" ry="7"/>
+      <ellipse cx="8"  cy="13" rx="6"   ry="6.5"/>
+      <!-- cx=24 (short, top ≈ 24) -->
+      <ellipse cx="24" cy="31" rx="8.5" ry="6.5"/>
+      <ellipse cx="25" cy="25" rx="6"   ry="6"/>
+      <!-- cx=40 (medium, top ≈ 15) -->
+      <ellipse cx="40" cy="30" rx="9"   ry="7"/>
+      <ellipse cx="41" cy="22" rx="7"   ry="6.5"/>
+      <ellipse cx="40" cy="16" rx="6"   ry="6"/>
+      <!-- cx=56 (tallest, top ≈ 11) -->
+      <ellipse cx="56" cy="29" rx="9"   ry="7"/>
+      <ellipse cx="57" cy="20" rx="7.5" ry="7"/>
+      <ellipse cx="56" cy="12" rx="6"   ry="6.5"/>
+      <!-- cx=72 (short, top ≈ 25) -->
+      <ellipse cx="72" cy="31" rx="8.5" ry="6.5"/>
+      <ellipse cx="73" cy="25" rx="6"   ry="5.5"/>
+      <!-- cx=88 (medium, top ≈ 13) -->
+      <ellipse cx="88" cy="30" rx="9"   ry="7"/>
+      <ellipse cx="89" cy="20" rx="7"   ry="6.5"/>
+      <ellipse cx="88" cy="14" rx="6"   ry="6"/>
+      <!-- wrap copies: cx=104 (= cx=8) and cx=−8 (= cx=88) -->
+      <ellipse cx="104" cy="30" rx="9"   ry="7"/>
+      <ellipse cx="105" cy="21" rx="7.5" ry="7"/>
+      <ellipse cx="104" cy="13" rx="6"   ry="6.5"/>
+      <ellipse cx="-8"  cy="30" rx="9"   ry="7"/>
+      <ellipse cx="-7"  cy="20" rx="7"   ry="6.5"/>
+      <ellipse cx="-8"  cy="14" rx="6"   ry="6"/>
+    </g>
+
+    <!-- SUNLIT caps (#5fa97a) — the warm-light-bias accent, a small highlight on the top-left of
+         each crown's topmost lobe. Highest z; the only lighter tone, keeps the trees reading as
+         sunlit foliage against the sky rather than flat cutouts. -->
+    <g fill="#5fa97a">
+      <ellipse cx="6"   cy="11" rx="3.2" ry="3.2"/>
+      <ellipse cx="23"  cy="23" rx="3"   ry="3"/>
+      <ellipse cx="38"  cy="14" rx="3.2" ry="3"/>
+      <ellipse cx="54"  cy="10" rx="3.2" ry="3.2"/>
+      <ellipse cx="71"  cy="23" rx="3"   ry="3"/>
+      <ellipse cx="86"  cy="12" rx="3.2" ry="3"/>
+      <ellipse cx="102" cy="11" rx="3.2" ry="3.2"/>
+      <ellipse cx="-10" cy="12" rx="3.2" ry="3"/>
+    </g>
+  </g>
+</svg>

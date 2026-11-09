@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="448" viewBox="0 0 1040 448">
+  <!-- POSTCARD IMAGE LAYER — PLACEHOLDER (CATS-83).
+       This is the dedicated, STATE-NEUTRAL art slot for the end-of-game share postcard's
+       IMAGE layer (it fills the picture window for any outcome: won / arrived_empty / lost).
+       The final art is user-provided; swap this file IN PLACE (same path) to ship it — no code
+       change needed (see assets/sprites/postcard/README.md).
+
+       Intended: a single postcard illustration that reads as FrogGame at a glance — sunset
+       lake, Pip on his lily-pad boat mid-crossing, the string-lit party shore glowing ahead.
+       Warm + hopeful, never harsh (R7/R8/R9). Flat-soft-rounded, ART_DIRECTION palette.
+       Authored at 1040×448 to match the picture window (CARD_W × SCENE_H in src/ui/postcard.js). -->
+  <defs>
+    <linearGradient id="phSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#f7c98e"/>
+      <stop offset="0.45" stop-color="#f0a878"/>
+      <stop offset="0.82" stop-color="#9a5a6a"/>
+      <stop offset="1"    stop-color="#5a4a6a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- SKY -->
+  <rect x="0" y="0" width="1040" height="270" fill="url(#phSky)"/>
+  <circle cx="820" cy="150" r="54" fill="#ffe6b0" opacity="0.9"/>
+  <circle cx="820" cy="150" r="84" fill="#ffe6b0" opacity="0.16"/>
+
+  <!-- WATER (dusk indigo) -->
+  <rect x="0" y="270" width="1040" height="178" fill="#16243f"/>
+  <path d="M 0 312 Q 130 306 260 312 Q 390 318 520 312 Q 650 306 780 312 Q 910 318 1040 312" fill="none" stroke="#3b4a7a" stroke-width="2.2" opacity="0.6"/>
+  <path d="M 0 352 Q 160 346 320 352 Q 480 358 640 352 Q 800 346 960 352 Q 1000 353 1040 352" fill="none" stroke="#3b4a7a" stroke-width="1.8" opacity="0.5"/>
+
+  <!-- FAR (party) SHORE — still lit, the destination -->
+  <rect x="824" y="236" width="216" height="58" fill="#3a7d4f"/>
+  <rect x="824" y="232" width="216" height="8" fill="#4f9466"/>
+  <path d="M 796 244 Q 920 196 1040 236" fill="none" stroke="#5a4a2a" stroke-width="2"/>
+  <g fill="#ffd98a" opacity="0.9">
+    <circle cx="828" cy="226" r="7"/><circle cx="880" cy="208" r="8"/><circle cx="936" cy="200" r="8"/>
+    <circle cx="992" cy="212" r="7"/><circle cx="1030" cy="230" r="6.5"/>
+  </g>
+
+  <!-- HOME SHORE -->
+  <rect x="0" y="238" width="180" height="56" fill="#3a7d4f"/>
+  <rect x="0" y="232" width="180" height="8" fill="#4f9466"/>
+
+  <!-- lily pads -->
+  <g>
+    <ellipse cx="300" cy="384" rx="34" ry="11" fill="#4caf6f"/><ellipse cx="300" cy="382" rx="24" ry="7" fill="#3a8f57"/>
+    <ellipse cx="540" cy="420" rx="30" ry="10" fill="#4caf6f"/>
+  </g>
+
+  <!-- PIP on his lily-pad boat, mid-crossing, a small bouquet on the bow -->
+  <g transform="translate(620 372)">
+    <ellipse cx="0" cy="22" rx="90" ry="28" fill="#4caf6f"/>
+    <ellipse cx="0" cy="16" rx="70" ry="19" fill="#3a8f57"/>
+    <ellipse cx="-4" cy="-26" rx="34" ry="27" fill="#bcd65f"/>
+    <ellipse cx="-4" cy="-15" rx="21" ry="14" fill="#f4f0d6"/>
+    <circle cx="-18" cy="-44" r="11" fill="#bcd65f"/>
+    <circle cx="10" cy="-44" r="11" fill="#bcd65f"/>
+    <circle cx="-18" cy="-41" r="7.6" fill="#ffffff"/>
+    <circle cx="10" cy="-41" r="7.6" fill="#ffffff"/>
+    <circle cx="-16.5" cy="-39.5" r="3.6" fill="#1c2740"/>
+    <circle cx="11.5" cy="-39.5" r="3.6" fill="#1c2740"/>
+    <path d="M -14 -20 Q -4 -13 6 -20" fill="none" stroke="#7d9a3a" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- a couple of blooms on the bow (the love letter) -->
+    <g transform="translate(40 -30)"><rect x="-2" y="0" width="4" height="20" rx="2" fill="#7d9a3a"/><circle r="9" fill="#f2d3e0"/><circle r="3.5" fill="#e8b24c"/></g>
+    <g transform="translate(56 -26)"><rect x="-2" y="0" width="4" height="16" rx="2" fill="#7d9a3a"/><circle r="8" fill="#f4e3a1"/><circle r="3" fill="#e8b24c"/></g>
+  </g>
+
+  <!-- a clearly-marked dashed frame + label so a missing final asset reads as "drop art here,"
+       never as a broken image. -->
+  <rect x="22" y="22" width="996" height="404" rx="20" fill="none" stroke="#c9b97f" stroke-width="3" stroke-dasharray="12 9" opacity="0.55"/>
+  <text x="520" y="58" text-anchor="middle" font-family="'Fredoka', system-ui, sans-serif" font-size="22" font-weight="600" fill="#9a8a4e" opacity="0.85">postcard image — placeholder</text>
+  <text x="520" y="82" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#9a8a4e" opacity="0.85">drop the final image at this path to ship it (no code change)</text>
+</svg>

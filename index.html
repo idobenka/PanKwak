@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="icon" href="data:," />
+    <title>FrogGame — Graybox crossing</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #0b1020;
+        color: #dfe6f5;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        overflow: hidden;
+        height: 100%;
+      }
+      #game {
+        display: block;
+        margin: 0 auto;
+        background: #16324f;
+        touch-action: none;
+        /* CATS-104: the same 18px radius as the story/welcome/postcard cards, so the
+           game window shares one rounded frame with every other page. */
+        border-radius: 18px;
+        /* CATS-116 follow-up: the SAME window box the story page, welcome card and final
+           postcard present in — min(1000px,96vw) at the canvas's own 3:2 — so all four
+           surfaces are one size even on narrow windows. The canvas's 900×600 backing
+           store is untouched (crisp bitmap, CSS-scaled presentation only). CATS-122
+           raised the box from 900px to 1000px. */
+        width: min(1000px, 96vw);
+        height: auto;
+        aspect-ratio: 3 / 2;
+      }
+      #wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+      }
+      /* CATS-112: the game box — the same window every page (story card, welcome card,
+         game canvas, postcard) presents in. position:relative so the shared sound +
+         language controls bar pins to ITS top-right corner, not the browser's. */
+      #gamebox {
+        position: relative;
+      }
+      #hint {
+        position: fixed;
+        left: 0; right: 0; bottom: 8px;
+        text-align: center;
+        font-size: 12px;
+        color: #8aa0c8;
+        pointer-events: none;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="gamebox">
+        <canvas id="game" width="900" height="600"></canvas>
+      </div>
+    </div>
+    <div id="hint">Steer ↑/↓ or drag · ←/→ row · R to restart · M mute · +/− volume · tilt on mobile</div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

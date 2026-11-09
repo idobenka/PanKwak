@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- Sun — sky-landscape timer (CATS-51, stamped as the live asset since CATS-79).
+       Flat-fill, transparent bg, NO rays. Disc shown at its NOON reference tint (#fff4c2);
+       sky.js stamps this frame each frame and repaints the disc circle IN PLACE via pal.sun
+       across the day-cycle (dawn #ffe1b0 -> noon #fff4c2 -> sunset #ffd27a -> dusk #e07a3a),
+       then the core back on top (pixel-identical). At the arc's two ends the horizon hue
+       boost (CATS-79) additionally blends the disc fill + halo toward #ffb347.
+       Halo tint #fff6e0 and core tint #fffdf2 stay FIXED (they sell "sun" on a pale dawn sky).
+       Draw order on canvas (bottom -> top) = halo -> disc -> core, exactly as layered here. -->
+  <!-- HALO: 3 concentric flat circles, low alpha, stacked outward (aura, not a radial gradient —
+       stays inside the ART_DIRECTION "flat fill, no soft shading" rule). radiusMul [2.6, 2.0, 1.5]. -->
+  <circle cx="24" cy="24" r="23.4" fill="#fff6e0" opacity="0.11"/>
+  <circle cx="24" cy="24" r="18.0" fill="#fff6e0" opacity="0.17"/>
+  <circle cx="24" cy="24" r="13.5" fill="#fff6e0" opacity="0.24"/>
+  <!-- DISC: pal.sun at noon. radiusMul 1.0 (= skyLandscape.sun.radius at 2.5x here). -->
+  <circle cx="24" cy="24" r="9.0" fill="#fff4c2"/>
+  <!-- CORE: bright warm-white body, drawn last on top. What makes a pale dawn sun read as sun-not-haze. radiusMul 0.55. -->
+  <circle cx="24" cy="24" r="5.0" fill="#fffdf2"/>
+</svg>

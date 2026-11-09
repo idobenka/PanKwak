@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Flower (Concept 4 bouquet pickup). Flat-soft-rounded, transparent bg, faces up. -->
+  <!-- Petals: 6 soft ovals around the bloom (light blush so they read on dark water). -->
+  <ellipse cx="16" cy="5"  rx="4.6" ry="3.4" fill="#f2d3e0"/>
+  <ellipse cx="26.2" cy="11" rx="4.6" ry="3.4" fill="#f6dce7" transform="rotate(60 26.2 11)"/>
+  <ellipse cx="26.2" cy="21" rx="4.6" ry="3.4" fill="#f2d3e0" transform="rotate(120 26.2 21)"/>
+  <ellipse cx="16" cy="27" rx="4.6" ry="3.4" fill="#f6dce7"/>
+  <ellipse cx="5.8"  cy="21" rx="4.6" ry="3.4" fill="#f2d3e0" transform="rotate(60 5.8 21)"/>
+  <ellipse cx="5.8"  cy="11" rx="4.6" ry="3.4" fill="#f6dce7" transform="rotate(120 5.8 11)"/>
+  <!-- warm yellow center -->
+  <circle cx="16" cy="16" r="4.6" fill="#e8b24c"/>
+  <circle cx="16" cy="16" r="2.6" fill="#f4cd6e"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="414" height="560" viewBox="0 0 414 560">
+  <!-- WELCOME LEFT IMAGE — PLACEHOLDER (CATS-80).
+       This is the left-column illustration of the welcome card. The final art is user-provided;
+       swap this file IN PLACE (same path) to ship it — no code change needed.
+       Intended: the love-letter crossing — Pip on his lily-pad boat mid-lake, a bouquet on the
+       bow, the string-lit party shore glowing in the distance, rose-gold sunset. Warm, hopeful,
+       never harsh (R7/R8/R9). Flat-soft-rounded, ART_DIRECTION palette. -->
+  <rect x="0" y="0" width="414" height="560" fill="#e2d9b8"/>
+  <!-- a centered, clearly-marked placeholder glyph so a missing final asset reads as
+       "drop art here," never as a broken image -->
+  <rect x="40" y="40" width="334" height="480" rx="18" fill="#eef3e0" stroke="#c9b97f" stroke-width="3" stroke-dasharray="10 8"/>
+  <!-- a tiny Pip-on-boat vignette as a friendly stand-in -->
+  <g transform="translate(207 250)">
+    <!-- sunset sky band -->
+    <rect x="-150" y="-150" width="300" height="180" fill="#f3a86b" opacity="0.55"/>
+    <circle cx="86" cy="-110" r="26" fill="#ffe6b0"/>
+    <!-- water -->
+    <rect x="-150" y="30" width="300" height="120" fill="#3b4a7a" opacity="0.45"/>
+    <!-- lily-pad boat -->
+    <ellipse cx="0" cy="40" rx="80" ry="22" fill="#4caf6f"/>
+    <ellipse cx="0" cy="36" rx="60" ry="15" fill="#3a8f57"/>
+    <!-- Pip -->
+    <ellipse cx="0" cy="14" rx="26" ry="20" fill="#bcd65f"/>
+    <ellipse cx="0" cy="20" rx="15" ry="10" fill="#f4f0d6"/>
+    <circle cx="-8" cy="4" r="6" fill="#bcd65f"/>
+    <circle cx="8" cy="4" r="6" fill="#bcd65f"/>
+    <circle cx="-7.5" cy="5" r="4" fill="#ffffff"/>
+    <circle cx="8.5" cy="5" r="4" fill="#ffffff"/>
+    <circle cx="-7" cy="6" r="2" fill="#1c2740"/>
+    <circle cx="9" cy="6" r="2" fill="#1c2740"/>
+    <path d="M -5 16 Q 1 21 7 16" fill="none" stroke="#7d9a3a" stroke-width="2" stroke-linecap="round"/>
+    <!-- a single bloom on the bow (the love letter) -->
+    <g transform="translate(34 -4)">
+      <rect x="-2" y="0" width="4" height="18" rx="2" fill="#7d9a3a"/>
+      <circle r="9" fill="#f2d3e0"/><circle r="3.5" fill="#e8b24c"/>
+    </g>
+  </g>
+  <text x="207" y="470" text-anchor="middle" font-family="'Fredoka', system-ui, sans-serif" font-size="20" font-weight="600" fill="#9a8a4e">welcome art placeholder</text>
+  <text x="207" y="492" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#9a8a4e">drop final image at this path</text>
+</svg>

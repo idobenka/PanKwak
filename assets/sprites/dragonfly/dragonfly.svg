@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Dragonfly (Concept 4 jar pickup). Mint body + shimmer wings. Flat-soft-rounded, transparent bg. -->
+  <!-- Faces left (toward the boat), matching the graybox orientation in render.js. -->
+  <!-- wings (upper pair, soft translucent shimmer) -->
+  <ellipse cx="18" cy="9"  rx="8" ry="3.6" fill="#bff7dd" opacity="0.85"/>
+  <ellipse cx="20" cy="13" rx="6.4" ry="3" fill="#d6fbe9" opacity="0.8"/>
+  <!-- body: head + thorax + tail, a soft mint taper -->
+  <ellipse cx="11" cy="16" rx="3.4" ry="3.2" fill="#9be3c4"/>
+  <ellipse cx="18" cy="16" rx="3" ry="2.8" fill="#7fd6b4"/>
+  <path d="M 20 16 L 30 15.2 L 30 16.8 Z" fill="#7fd6b4"/>
+  <!-- soft wing shimmer accents -->
+  <ellipse cx="16" cy="8.4" rx="3.4" ry="1.2" fill="#ffffff" opacity="0.55"/>
+  <ellipse cx="18.5" cy="11.4" rx="2.6" ry="0.9" fill="#ffffff" opacity="0.4"/>
+  <!-- eye dot toward the boat (comedy not menace — R8) -->
+  <circle cx="9" cy="15.4" r="1.3" fill="#1c2740"/>
+</svg>

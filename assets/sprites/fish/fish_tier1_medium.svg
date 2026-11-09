@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="64" viewBox="0 0 88 64">
+  <!-- Fish tier 1 — MEDIUM. "Apologetic glutton that burps a petal." Rounder, bigger dopey eye. Faces left. -->
+  <path d="M 68 32 Q 86 12 82 32 Q 86 52 68 32 Z" fill="#4f8aa6"/>
+  <!-- body: chubbier (taller) -->
+  <ellipse cx="40" cy="32" rx="32" ry="24" fill="#4f8aa6"/>
+  <!-- lighter belly -->
+  <ellipse cx="40" cy="41" rx="23" ry="14" fill="#c8dde6"/>
+  <!-- soft rounded top fin -->
+  <path d="M 36 9 Q 46 3 54 12 Q 44 14 36 9 Z" fill="#4f8aa6"/>
+  <!-- soft bottom fin -->
+  <path d="M 36 55 Q 44 61 52 55 Q 44 53 36 55 Z" fill="#4f8aa6"/>
+  <!-- open mouth, a stray petal escaping (the burp gag — R9) -->
+  <ellipse cx="11" cy="34" rx="4.5" ry="3.6" fill="#3a6d86"/>
+  <ellipse cx="5" cy="30" rx="4" ry="2.6" fill="#f2d3e0"/>
+  <!-- BIG dopey eye — more white, small pupil = vacant -->
+  <circle cx="20" cy="25" r="7" fill="#ffffff"/>
+  <circle cx="19" cy="25.5" r="3" fill="#1c2740"/>
+  <circle cx="20" cy="24" r="1.1" fill="#ffffff"/>
+  <!-- one droopy eyelid = contentedly clueless -->
+  <path d="M 14 23 Q 20 20 26 23" fill="none" stroke="#3a6d86" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- a couple of soft spots (cute, not menacing) -->
+  <circle cx="44" cy="28" r="2.4" fill="#3a6d86" opacity="0.5"/>
+  <circle cx="54" cy="34" r="2" fill="#3a6d86" opacity="0.5"/>
+</svg>

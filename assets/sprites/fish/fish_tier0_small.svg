@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="40" viewBox="0 0 56 40">
+  <!-- Fish tier 0 — SMALL. "Oops, guilty." Nibbled one flower, looks faintly sorry. Faces left. -->
+  <!-- rounded tail (soft, no blade) -->
+  <path d="M 44 20 Q 54 8 52 20 Q 54 32 44 20 Z" fill="#7fb6c9"/>
+  <!-- body: chubby oval -->
+  <ellipse cx="26" cy="20" rx="20" ry="14" fill="#7fb6c9"/>
+  <!-- lifted lighter belly -->
+  <ellipse cx="26" cy="25" rx="14" ry="8" fill="#cfe0e8"/>
+  <!-- soft top fin (rounded lobe) -->
+  <path d="M 24 6 Q 30 2 34 8 Q 28 9 24 6 Z" fill="#7fb6c9"/>
+  <!-- soft round mouth (open, like a gentle nibble — no teeth) -->
+  <ellipse cx="8" cy="22" rx="3" ry="2.4" fill="#5a93a8"/>
+  <!-- big dopey eye (toward boat) -->
+  <circle cx="14" cy="16" r="4.2" fill="#ffffff"/>
+  <circle cx="13" cy="16.5" r="2.1" fill="#1c2740"/>
+  <circle cx="13.7" cy="15.8" r="0.7" fill="#ffffff"/>
+  <!-- guilt blush (the apology for one nibble — R9) -->
+  <ellipse cx="16" cy="24" rx="3.2" ry="2" fill="#f2a9a0" opacity="0.55"/>
+</svg>
