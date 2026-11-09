@@ -2,19 +2,22 @@
 
 A small, browser-based game about a frog on a mission of the heart.
 
+Built with Multica AI coding agents.
+
 ## Elevator Pitch
 
 A small frog dreams of finding love.
+
 At dawn, the frog receives a love letter written on a lily petal from a distant pond.
+
 The letter is an invitation to the pool party tonight.
+
 Now the frog aims to reach the destination before sunset.
+
 Otherwise, the author of the letter would have their heart broken.
+
 The frog must overcome various obstacles and challenges along the way.
 
-
-## Status
-
-Early concept stage. Built with AI-assisted development and kept small on purpose.
 
 ### Run it
 
